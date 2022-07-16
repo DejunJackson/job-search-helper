@@ -9,9 +9,11 @@ def wordcloud(request):
         wc_form = WordCloudForm(request.POST)
         if wc_form.is_valid():
             wc_text = wc_form.cleaned_data['wc_text']
+            wc = gen_wordcloud(wc_text)
     else:
         wc_form = WordCloudForm()
-    wc = gen_wordcloud(wc_text)
+        wc = gen_wordcloud()
+
     
     context = {'wc':wc, 'wc_form': wc_form}
     return render(request, 'wordcloud.html', context)
