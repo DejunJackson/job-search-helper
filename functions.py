@@ -15,7 +15,7 @@ def gen_wordcloud(text=None):
     try:
         if text:
             wc = WordCloud().generate_from_text(text)
-            plt.figure(figsize = (10, 10), facecolor = None)
+            plt.figure(figsize = (10, 5), facecolor = None)
             plt.imshow(wc)
             plt.axis("off")
             plt.tight_layout(pad = 0)
