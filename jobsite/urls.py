@@ -3,5 +3,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.wordcloud, name=''),
+    path('wordcloud/', views.wordcloud, name=''),
+    path('dashboard/', views.dashboard, name=''),
 ]

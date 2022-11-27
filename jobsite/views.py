@@ -17,3 +17,8 @@ def wordcloud(request):
     
     context = {'wc':wc, 'wc_form': wc_form}
     return render(request, 'wordcloud.html', context)
+
+def dashboard(request):
+
+    # context = {'wc':wc, 'wc_form': wc_form}
+    return render(request, 'dashboard.html')
